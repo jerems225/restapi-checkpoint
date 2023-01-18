@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "87aa8351-459c-47a7-b3f3-1d61ad2d2d9b",
+		"name": "GomyCode-RestApi-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{base_uri}}:{{port}}/api/users",
+					"protocol": "http",
+					"host": [
+						"{{base_uri}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{base_uri}}:{{port}}/api/user/63c826ef9a940c989233f4b8",
+					"protocol": "http",
+					"host": [
+						"{{base_uri}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"user",
+						"63c826ef9a940c989233f4b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"claire\",\r\n    \"lastName\" : \"Mairne\",\r\n    \"email\" : \"MarineC@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{base_uri}}:{{port}}/api/user/create",
+					"protocol": "http",
+					"host": [
+						"{{base_uri}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Jery\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{base_uri}}:{{port}}/api/user/update/63c826ef9a940c989233f4b8",
+					"protocol": "http",
+					"host": [
+						"{{base_uri}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"user",
+						"update",
+						"63c826ef9a940c989233f4b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  User By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Jeje\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{base_uri}}:{{port}}/api/user/delete/63c82712fc066401c0bf6881",
+					"protocol": "http",
+					"host": [
+						"{{base_uri}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"user",
+						"delete",
+						"63c82712fc066401c0bf6881"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_uri",
+			"value": "127.0.0.1"
+		},
+		{
+			"key": "port",
+			"value": "8944"
+		}
+	]
+}
